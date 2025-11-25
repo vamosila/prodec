@@ -1,0 +1,22 @@
+-- database: ../database.sqlite
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM "products";
+
+create table products(
+  id integer not null primary key autoincrement,
+  name varchar(50),
+  price decimal(15,2),
+  quantity number,
+  description varchar(100)
+);
+
+INSERT INTO products 
+(id, name, price, quantity, description)
+VALUES
+	(1, 'Apple', 100, 10, 'Crunchy and juicy'),
+	(2, 'Banana', 50, 15, 'Yellow and sweet'),
+	(3, 'Orange', 80, 12, 'Juicy and sour'),
+	(4, 'Pineapple', 120, 8, 'Sweet and tropical'),
+	(5, 'Grape', 60, 20, 'Sweet and juicy');
